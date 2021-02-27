@@ -1,0 +1,89 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family-josefin;
+    font-size: $Font-size;
+    font-weight: $weight-josefin;
+
+    &.noscroll {
+        overflow: hidden;
+    }
+}
+
+header {
+    height: 40.625rem;
+}
+
+.navbar {
+    display: flex;
+    padding-top: 2.5rem;
+
+    @include breakpoint-up(medium) {
+        padding-top: 5.5rem;
+    }
+
+    img {
+
+
+        &:first-child {
+            width: 9rem;
+        }
+    }
+
+    #btnOpen,
+    #btnClose {
+        @include breakpoint-up(medium) {
+            display: none;
+        }
+    }
+}
+
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.container {
+    @include breakpoint-up(medium) {
+        padding: 0 10rem;
+    }
+
+    padding: 0 1.5rem;
+
+}
+
+li {
+    list-style-type: none;
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+h1,
+h2,
+button {
+    line-height: 0.9;
+    text-transform: uppercase;
+}
+
+.open {
+    display: block;
+}
+
+.close {
+    display: none;
+}

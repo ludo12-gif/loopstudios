@@ -1,0 +1,128 @@
+.footer {
+    background-color: $black;
+    margin-top: 10rem;
+    color: $white;
+    text-align: center;
+
+    @include breakpoint-up(medium) {
+        text-align: inherit;
+    }
+
+
+    @include breakpoint-up(medium) {
+        .flex {
+            display: flex;
+            padding-top: 1rem;
+        }
+    }
+
+
+    &-logo {
+        margin: 1.5rem;
+
+        @include breakpoint-up(medium) {
+            margin-left: 0;
+            margin-bottom: 0.875rem;
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin: 0.9375rem;
+
+        @include breakpoint-up(medium) {
+
+            display: inline-block;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    a {
+        color: $white;
+        font-size: 1.2rem;
+        font-weight: 800;
+
+        @include breakpoint-up(medium) {
+            &::before {
+                width: 50%;
+                right: 25%;
+                left: 25%;
+            }
+        }
+    }
+
+    .item {
+        @include breakpoint-up(medium) {
+            text-align: right;
+        }
+    }
+
+    .network {
+        display: inline-block;
+        padding-top: 2rem;
+
+        &:not(:last-child) {
+            padding-right: 1rem;
+        }
+
+        @include breakpoint-up(medium) {
+            &::before {
+                width: calc(100% - 1rem);
+            }
+
+            &:last-child::before {
+                width: 100%;
+            }
+        }
+    }
+
+    p {
+        padding-bottom: 3.5rem;
+
+        @include breakpoint-up(medium) {
+            padding-top: 0.9375rem;
+            margin-bottom: 0;
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: $darkGray;
+        }
+    }
+
+
+    a,
+    .network {
+        @include breakpoint-up(medium) {
+
+            position: relative;
+            color: $white;
+            transition: color 300ms ease-in-out;
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                height: 0.1875rem;
+
+                bottom: -0.75rem;
+                background: $white;
+                opacity: 0;
+                transition: opacity 300ms ease-in-out;
+            }
+
+            &:hover {
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
+
+}

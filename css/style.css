@@ -1,0 +1,570 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 300;
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+header {
+  height: 40.625rem;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 2.5rem;
+}
+
+@media (min-width: 23.4375em) {
+  .navbar {
+    padding-top: 5.5rem;
+  }
+}
+
+.navbar img:first-child {
+  width: 9rem;
+}
+
+@media (min-width: 23.4375em) {
+  .navbar #btnOpen,
+  .navbar #btnClose {
+    display: none;
+  }
+}
+
+.jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container {
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 23.4375em) {
+  .container {
+    padding: 0 10rem;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+button {
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.open {
+  display: block;
+}
+
+.close {
+  display: none;
+}
+
+.header {
+  background: url(../images/mobile/image-hero.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 23.4375em) {
+  .header {
+    background: url(../images/desktop/image-hero.jpg);
+    background-size: cover;
+  }
+}
+
+.header #desktop {
+  display: none;
+}
+
+@media (min-width: 23.4375em) {
+  .header #desktop {
+    display: block;
+  }
+  .header #desktop a {
+    position: relative;
+    color: white;
+    font-weight: 800;
+    -webkit-transition: color 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
+  }
+  .header #desktop a:not(:last-child) {
+    margin-right: 2rem;
+  }
+  .header #desktop a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0.1875rem;
+    width: 50%;
+    right: 25%;
+    left: 25%;
+    bottom: -0.75rem;
+    background: white;
+    opacity: 0;
+    -webkit-transition: opacity 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out;
+  }
+  .header #desktop a:hover::before {
+    opacity: 1;
+  }
+}
+
+.header .title {
+  border: 1px solid white;
+  margin: 10.625rem 0;
+  max-width: 40.625rem;
+}
+
+.header .title h1 {
+  margin: 0;
+  padding: 1.2rem;
+  font-size: 2.6rem;
+  text-align: left;
+  color: white;
+}
+
+@media (min-width: 23.4375em) {
+  .header .title h1 {
+    padding: 2.625rem;
+    font-size: 4.4rem;
+    line-height: 97%;
+  }
+}
+
+.bg-color {
+  background: black;
+}
+
+.bg-color #menu {
+  padding: 0;
+  margin-top: 9.625rem;
+  font-size: 2rem;
+}
+
+.bg-color #desktop {
+  display: none;
+}
+
+.bg-color li {
+  margin: 0.825rem 0;
+}
+
+.bg-color a {
+  color: white;
+  text-transform: uppercase;
+}
+
+.bg-color .title {
+  display: none;
+}
+
+.hero {
+  margin-top: 6rem;
+}
+
+@media (min-width: 23.4375em) {
+  .hero {
+    position: relative;
+  }
+}
+
+.hero .interactive {
+  max-width: 100%;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 23.4375em) {
+  .hero__end {
+    position: absolute;
+    top: 11.25rem;
+    left: 46.25rem;
+    background-color: white;
+    padding: 0 10rem 0 6rem;
+  }
+}
+
+.hero__title {
+  font-size: 1.8rem;
+  margin: 0 0 1.625rem 0;
+  text-align: center;
+}
+
+@media (min-width: 23.4375em) {
+  .hero__title {
+    padding-top: 6rem;
+    margin: 0 0 2.7rem 0;
+    text-align: left;
+    font-size: 3.2rem;
+  }
+}
+
+.hero p {
+  color: dimgray;
+  text-align: center;
+  margin: 0;
+  padding: 0 1.625rem;
+  line-height: 200%;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+@media (min-width: 23.4375em) {
+  .hero p {
+    padding: 0;
+    font-size: 0.93rem;
+    text-align: left;
+    line-height: 150%;
+  }
+}
+
+.hero .grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  padding-top: 0.8125rem;
+}
+
+@media (min-width: 23.4375em) {
+  .hero .grid-container {
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+    gap: 2rem;
+  }
+}
+
+.hero .grid-box {
+  position: relative;
+  padding: 0.8125rem 0;
+}
+
+@media (min-width: 23.4375em) {
+  .hero .grid-box {
+    padding: 0;
+  }
+}
+
+.hero .grid-box .box1,
+.hero .grid-box .box2,
+.hero .grid-box .box3,
+.hero .grid-box .box4,
+.hero .grid-box .box5,
+.hero .grid-box .box6,
+.hero .grid-box .box7,
+.hero .grid-box .box8 {
+  height: 7.375rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 23.4375em) {
+  .hero .grid-box .box1,
+  .hero .grid-box .box2,
+  .hero .grid-box .box3,
+  .hero .grid-box .box4,
+  .hero .grid-box .box5,
+  .hero .grid-box .box6,
+  .hero .grid-box .box7,
+  .hero .grid-box .box8 {
+    height: 28.2rem;
+  }
+}
+
+.hero .grid-box .box1:not([src]) {
+  background-image: url(../images/mobile/image-deep-earth.jpg);
+}
+
+@media (min-width: 23.4375em) {
+  .hero .grid-box .box1:not([src]) {
+    background-image: url(../images/desktop/image-deep-earth.jpg);
+  }
+}
+
+.hero .grid-box .box2:not([src]) {
+  background-image: url(../images/mobile/image-night-arcade.jpg);
+}
+
+@media (min-width: 23.4375em) {
+  .hero .grid-box .box2:not([src]) {
+    background-image: url(../images/desktop/image-night-arcade.jpg);
+  }
+}
+
+.hero .grid-box .box3:not([src]) {
+  background-image: url(../images/mobile/image-soccer-team.jpg);
+}
+
+@media (min-width: 23.4375em) {
+  .hero .grid-box .box3:not([src]) {
+    background-image: url(../images/desktop/image-soccer-team.jpg);
+  }
+}
+
+.hero .grid-box .box4:not([src]) {
+  background-image: url(../images/mobile/image-grid.jpg);
+}
+
+@media (min-width: 23.4375em) {
+  .hero .grid-box .box4:not([src]) {
+    background-image: url(../images/desktop/image-grid.jpg);
+  }
+}
+
+.hero .grid-box .box5:not([src]) {
+  background-image: url(../images/mobile/image-from-above.jpg);
+}
+
+@media (min-width: 23.4375em) {
+  .hero .grid-box .box5:not([src]) {
+    background-image: url(../images/desktop/image-from-above.jpg);
+  }
+}
+
+.hero .grid-box .box6:not([src]) {
+  background-image: url(../images/mobile/image-pocket-borealis.jpg);
+}
+
+@media (min-width: 23.4375em) {
+  .hero .grid-box .box6:not([src]) {
+    background-image: url(../images/desktop/image-pocket-borealis.jpg);
+  }
+}
+
+.hero .grid-box .box7:not([src]) {
+  background-image: url(../images/mobile/image-curiosity.jpg);
+}
+
+@media (min-width: 23.4375em) {
+  .hero .grid-box .box7:not([src]) {
+    background-image: url(../images/desktop/image-curiosity.jpg);
+  }
+}
+
+.hero .grid-box .box8:not([src]) {
+  background-image: url(../images/mobile/image-fisheye.jpg);
+}
+
+@media (min-width: 23.4375em) {
+  .hero .grid-box .box8:not([src]) {
+    background-image: url(../images/desktop/image-fisheye.jpg);
+  }
+}
+
+.hero .grid-box .text {
+  position: absolute;
+  z-index: 999;
+  font-size: 1rem;
+  top: 3.25rem;
+}
+
+@media (min-width: 23.4375em) {
+  .hero .grid-box .text {
+    top: 22rem;
+  }
+}
+
+.hero .grid-box .text h2 {
+  width: 10rem;
+  padding: 0 1rem;
+  color: white;
+}
+
+@media (min-width: 23.4375em) {
+  .hero .grid-box .text h2 {
+    font-size: 1.375rem;
+    padding: 0 0 0 2.75rem;
+    line-height: 1.65rem;
+  }
+}
+
+.hero button {
+  position: absolute;
+  margin-top: 1.25rem;
+  border: 1px solid black;
+  width: 9.6875rem;
+  height: 2.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  letter-spacing: 0.25rem;
+}
+
+@media (min-width: 23.4375em) {
+  .hero button {
+    left: inherit;
+    -webkit-transform: inherit;
+            transform: inherit;
+    right: 10rem;
+    top: 7%;
+  }
+  .hero button:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+.footer {
+  background-color: black;
+  margin-top: 10rem;
+  color: white;
+  text-align: center;
+}
+
+@media (min-width: 23.4375em) {
+  .footer {
+    text-align: inherit;
+  }
+}
+
+@media (min-width: 23.4375em) {
+  .footer .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 1rem;
+  }
+}
+
+.footer-logo {
+  margin: 1.5rem;
+}
+
+@media (min-width: 23.4375em) {
+  .footer-logo {
+    margin-left: 0;
+    margin-bottom: 0.875rem;
+  }
+}
+
+.footer ul {
+  padding: 0;
+  margin: 0;
+}
+
+.footer li {
+  margin: 0.9375rem;
+}
+
+@media (min-width: 23.4375em) {
+  .footer li {
+    display: inline-block;
+  }
+  .footer li:first-child {
+    margin-left: 0;
+  }
+}
+
+.footer a {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+@media (min-width: 23.4375em) {
+  .footer a::before {
+    width: 50%;
+    right: 25%;
+    left: 25%;
+  }
+}
+
+@media (min-width: 23.4375em) {
+  .footer .item {
+    text-align: right;
+  }
+}
+
+.footer .network {
+  display: inline-block;
+  padding-top: 2rem;
+}
+
+.footer .network:not(:last-child) {
+  padding-right: 1rem;
+}
+
+@media (min-width: 23.4375em) {
+  .footer .network::before {
+    width: calc(100% - 1rem);
+  }
+  .footer .network:last-child::before {
+    width: 100%;
+  }
+}
+
+.footer p {
+  padding-bottom: 3.5rem;
+}
+
+@media (min-width: 23.4375em) {
+  .footer p {
+    padding-top: 0.9375rem;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #8c8c8c;
+  }
+}
+
+@media (min-width: 23.4375em) {
+  .footer a,
+  .footer .network {
+    position: relative;
+    color: white;
+    -webkit-transition: color 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
+  }
+  .footer a::before,
+  .footer .network::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0.1875rem;
+    bottom: -0.75rem;
+    background: white;
+    opacity: 0;
+    -webkit-transition: opacity 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out;
+  }
+  .footer a:hover::before,
+  .footer .network:hover::before {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */

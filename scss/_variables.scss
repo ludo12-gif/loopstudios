@@ -1,0 +1,18 @@
+//font family
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+$font-family-alata: 'Alata',
+sans-serif;
+$weight-alata:400;
+$font-family-josefin: 'Josefin Sans',
+sans-serif;
+$weight-josefin: 300;
+
+//color
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$darkGray: hsl(0, 0%, 55%);
+$veryDarkGray: hsl(0, 0%, 41%);
+
+//Font size
+$Font-size: 0.9375rem
