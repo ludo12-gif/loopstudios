@@ -21,6 +21,13 @@ body {
   font-weight: 300;
 }
 
+@media (min-width: 23.4375em) {
+  body {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
+
 body.noscroll {
   overflow: hidden;
 }

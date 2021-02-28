@@ -10,6 +10,11 @@ html {
 }
 
 body {
+    @include breakpoint-up(medium) {
+        width: 1440px;
+        margin: 0 auto;
+    }
+
     margin: 0;
     padding: 0;
     font-family: $font-family-josefin;
